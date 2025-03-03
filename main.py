@@ -1,6 +1,6 @@
 import numpy as np
 
-rows = columns = int(input("Введите количество строк: "))
+rows = columns = int(input("Введите размер матрицы n: "))
 A_matrix = np.zeros((rows, columns), dtype=np.int64)
 
 for i in range(rows):
@@ -30,3 +30,5 @@ def det_replaced(A_matrix, A_constants):
 if det_Main != 0:
     solutions = det_replaced(A_matrix, A_constants)
     print(np.round(solutions, 2))
+else:
+    print("Нет решений")
